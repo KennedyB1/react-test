@@ -1,0 +1,24 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  background-color: #f0f0f0;
+  width: 100%;
+  margin: 0; /* Reset margin to ensure header starts at the top */
+  position: fixed; /* Add this to make the header fixed at the top */
+  top: 0; /* Add this to position the header at the top */
+  left: 0; /* Add this to position the header at the left edge */
+}
+
+.logo img {
+  height: 40px;
+  /* Add any additional styles for the logo */
+}
+
