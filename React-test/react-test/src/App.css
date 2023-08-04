@@ -8,17 +8,40 @@
 header {
   display: flex;
   align-items: center;
-  padding: 1rem;
   background-color: #f0f0f0;
   width: 100%;
   margin: 0; /* Reset margin to ensure header starts at the top */
   position: fixed; /* Add this to make the header fixed at the top */
   top: 0; /* Add this to position the header at the top */
   left: 0; /* Add this to position the header at the left edge */
+  justify-content: space-between;
+  height: 4rem;
 }
 
 .logo img {
   height: 40px;
   /* Add any additional styles for the logo */
+}
+
+/* Reset some default input styles */
+input {
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 16px;
+  padding: 10px 12px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.2s ease;
+}
+
+/* Add a border and box shadow on focus */
+input:focus {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Add some placeholder styles */
+input::placeholder {
+  color: #999;
 }
 
