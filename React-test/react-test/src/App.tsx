@@ -18,9 +18,9 @@ function App() {
     const getData = async () => {
       try {
         const response = await axios.get(
-          'https://swapi.dev/api/people/2'
+          'https://transfermarkt-api.vercel.app/openapi.json'
         );
-        console.log(response.data.name);
+        console.log(response.data);
       } catch (error) {
         console.error('Error fetching data:', error);
       }
