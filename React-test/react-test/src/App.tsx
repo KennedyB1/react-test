@@ -18,9 +18,9 @@ function App() {
     const getData = async () => {
       try {
         const response = await axios.get(
-          'https://transfermarkt-api.vercel.app/clubs/search/hammarby%20if'
+          'https://swapi.dev/api/people/2'
         );
-        console.log(response.data);
+        console.log(response.data.name);
       } catch (error) {
         console.error('Error fetching data:', error);
       }
