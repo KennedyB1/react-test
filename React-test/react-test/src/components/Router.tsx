@@ -1,7 +1,8 @@
 import { createBrowserRouter } from "react-router-dom";
 import { Bb } from "./Bb";
 import { Hellow } from "./hello";
-import { StarWars } from "./starwars";
+import { Europe } from "./Europe";
+import { EuCountry } from "./EuCountry";
 
 export const router = createBrowserRouter([
 
@@ -14,8 +15,12 @@ export const router = createBrowserRouter([
         element: <Hellow />
     },
     {
-        path: "/starwars/:id",
-        element: <StarWars />
+        path: "/europe",
+        element: <Europe />
+    },
+    {
+        path: "europe/:id",
+        element: <EuCountry />
     }
 
 

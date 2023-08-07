@@ -1,4 +1,4 @@
-import { useState, ChangeEvent } from 'react';
+import { Link } from "react-router-dom";
 
 export const Bb = () => {
 
@@ -32,21 +32,32 @@ export const Bb = () => {
      });
  */
 
+    /*
+        const [number, setNumber,] = useState("");
+    
+        const handelButtonClick = (e: ChangeEvent<HTMLInputElement>) => {
+            setNumber(e.target.value);
+    
+        };
+    
+        const content =
+            <div>
+                <input value={number} onChange={handelButtonClick} />
+                <h2>{number}</h2>
+            </div>
+            ;
+    
+        return <div><h3>{content}</h3></div>
+    */
 
-    const [number, setNumber,] = useState("");
+    const continent = ['Europe', 'Africa', 'Asia', 'NA', 'CA', 'SA'];
 
-    const handelButtonClick = (e: ChangeEvent<HTMLInputElement>) => {
-        setNumber(e.target.value);
+    return <div><h2>Continents</h2><ul>
+        {
+            continent.map((i, index) => <li key={index}><Link to={`/${i}`}>{i}</Link></li>)
+        }
 
-    };
-
-    const content =
-        <div>
-            <input value={number} onChange={handelButtonClick} />
-            <h2>{number}</h2>
-        </div>
-        ;
-
-    return <div><h3>{content}</h3></div>
+    </ul>
+    </div>
 
 };

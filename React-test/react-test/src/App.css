@@ -81,7 +81,6 @@ input::placeholder {
   width: 100%;
   margin: 0; /* Reset margin to ensure header starts at the top */
   position: absolute;
-  bottom: 0; /* Add this to position the header at the top */
   left: 0; /* Add this to position the header at the left edge */
   justify-content: space-between;
   height: 4rem;
