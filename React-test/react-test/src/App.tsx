@@ -18,7 +18,7 @@ function App() {
     const getData = async () => {
       try {
         const response = await axios.get(
-          'https://transfermarkt-api.vercel.app/openapi.json'
+          'https://transfermarkt-api.vercel.app/competitions/GB1/clubs?season_id=2023'
         );
         console.log(response.data);
       } catch (error) {
