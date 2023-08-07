@@ -11,14 +11,14 @@ export const router = createBrowserRouter([
     },
     {
         path: "/about",
-        element: <Hellow></Hellow>
+        element: <Hellow />
     },
     {
         path: "/starwars/:id",
-        element: <StarWars></StarWars>
+        element: <StarWars />
     }
 
 
 
 
-])
+]);

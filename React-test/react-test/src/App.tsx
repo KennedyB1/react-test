@@ -12,15 +12,25 @@ import { Footer } from "./components/Footer";
 
 function App() {
 
+
+  interface Country {
+    name: {
+      common: string;
+    };
+  }
+
   // const [name, setName] = useState('');
 
   useEffect(() => {
     const getData = async () => {
       try {
-        const response = await axios.get(
-          'https://transfermarkt-api.vercel.app/competitions/GB1/clubs?season_id=2023'
+        const response = await axios.get<Country[]>(
+          'https://restcountries.com/v3.1/region/europe'
         );
-        console.log(response.data);
+        const countries = response.data;
+        countries.forEach((country) => {
+          console.log(country.name.common);
+        });
       } catch (error) {
         console.error('Error fetching data:', error);
       }
@@ -33,6 +43,7 @@ function App() {
   return <><RouterProvider router={router} />
 
     <Header />
+    <ul></ul>
     <Footer></Footer>
 
 
