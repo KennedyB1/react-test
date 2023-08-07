@@ -43,7 +43,6 @@ function App() {
   return <><RouterProvider router={router} />
 
     <Header />
-    <ul></ul>
     <Footer></Footer>
 
 
