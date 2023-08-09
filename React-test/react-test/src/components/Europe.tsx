@@ -7,8 +7,11 @@ export const Europe = () => {
         name: {
             common: string;
         };
+        flags: {
+            svg: string; // URL to the flag SVG image
+        };
     }
-
+    // https://restcountries.com/#endpoints-region
     const [countries, setCountries] = useState<Country[]>([]);
 
     useEffect(() => {
@@ -28,12 +31,14 @@ export const Europe = () => {
     }, []);
 
     return (
-        <div>
+        <div className="countries">
             <h2>Europe</h2>
             <ul>
                 {countries.map((country, index) => (
                     <li key={index}>
-                        <Link to={`${country.name.common}`}>{country.name.common}</Link>
+                        <Link to={`${country.name.common}`} >
+                            {country.name.common} <img src={country.flags.svg} alt={`${country.name.common} flag`} />
+                        </Link>
                     </li>
                 ))}
             </ul>

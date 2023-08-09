@@ -86,4 +86,19 @@ input::placeholder {
   height: 4rem;
 }
 
+.countries li {
 
+  list-style-type: none;
+}
+
+.countries ul {
+
+  flex-wrap: wrap;
+    display: flex;
+}
+
+.countries img{
+
+  width: 50px;
+  height: 25px;
+}
