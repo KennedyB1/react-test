@@ -1,13 +1,17 @@
-//import { useState, useEffect } from 'react';
-// import { Link } from 'react-router-dom';
-//import axios from 'axios';
+import { useLocation } from 'react-router-dom';
+import { Country } from '../models/Country';
+import { Hellow } from './sideBar';
 
 export const EuCountry = () => {
-
-
+    const location = useLocation();
+    const country = location.state?.country as Country;
+    
     return (
+        <>
         <div>
-            <h1>123</h1>
+            <h1>Country: {country.name.common}</h1>
         </div>
+        <Hellow />
+        </>
     );
 };

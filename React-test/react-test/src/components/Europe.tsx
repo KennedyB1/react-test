@@ -1,16 +1,10 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
+import { Country } from '../models/Country';
 
 export const Europe = () => {
-    interface Country {
-        name: {
-            common: string;
-        };
-        flags: {
-            svg: string; // URL to the flag SVG image
-        };
-    }
+    
     // https://restcountries.com/#endpoints-region
     const [countries, setCountries] = useState<Country[]>([]);
 
@@ -36,7 +30,7 @@ export const Europe = () => {
             <ul>
                 {countries.map((country, index) => (
                     <li key={index}>
-                        <Link to={`${country.name.common}`} >
+                        <Link to={`${country.name.common}`} state={{ country }} >
                             {country.name.common} <img src={country.flags.svg} alt={`${country.name.common} flag`} />
                         </Link>
                     </li>
