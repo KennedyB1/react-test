@@ -1,19 +1,51 @@
-import { Link } from "react-router-dom";
-//import { Country } from "../models/Country";
+import { Sidebar, Menu, MenuItem, SubMenu } from "react-pro-sidebar";
+ 
+
 
 export const Hellow = () => {
-    //  const age: number = 12;
-   // const location = useLocation();
-   // const country = location.state?.country as Country;
 
-    const numbers = [1, 2, 22, 4];
+    //https://www.npmjs.com/package/react-pro-sidebar?activeTab=readme
 
-    return <div className="side-chant"><h2>Chants</h2><ul>
-        {
-            numbers.map((i, index) => <li key={index}><Link to={ `${i}`}>{i}</Link></li>)
-        }
+    return (
+        <>
+        
+          <Sidebar className="app">
+        <p>Chants</p>
+            <Menu>
+              <MenuItem> Dashboard </MenuItem>
+              <MenuItem> Invoices </MenuItem>
+              <SubMenu label="Charts">
+                <MenuItem> Timeline Chart </MenuItem>
+                <MenuItem> Bubble Chart </MenuItem>
+              </SubMenu>
+              <SubMenu label="Wallets">
+                <MenuItem>Current Wallet</MenuItem>
+                <MenuItem>Savings Wallet</MenuItem>
+              </SubMenu>
+              <MenuItem> Transactions </MenuItem>
+              <SubMenu label="Settings">
+                <MenuItem> Account </MenuItem>
+                <MenuItem> Privacy </MenuItem>
+                <MenuItem> Notifications </MenuItem>
+              </SubMenu>
+              <MenuItem> Logout </MenuItem>
+              <MenuItem> Logout </MenuItem>
+              <MenuItem> Logout </MenuItem>
+              <MenuItem> Logout </MenuItem>
+              <MenuItem> Logout </MenuItem>
+              <MenuItem> Logout </MenuItem>
+              <MenuItem> Logout </MenuItem>
+              <MenuItem> Logout </MenuItem>
+              <MenuItem> Logout </MenuItem>
+              <MenuItem> Logout </MenuItem>
+              <MenuItem> Logout </MenuItem>
+              <MenuItem> Logout </MenuItem>
+              <MenuItem> Logout </MenuItem>
+              <MenuItem> Logout </MenuItem>
+            </Menu>
+          </Sidebar>
+          
+        </>
+      );
+    };
 
-    </ul>
-    </div>
-
-}

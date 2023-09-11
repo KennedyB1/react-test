@@ -8,10 +8,11 @@ export const EuCountry = () => {
     
     return (
         <>
+        <Hellow />
         <div>
             <h1>Country: {country.name.common}</h1>
         </div>
-        <Hellow />
+        
         </>
     );
 };

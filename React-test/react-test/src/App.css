@@ -1,14 +1,13 @@
 #root {
-  max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
+
   text-align: center;
 }
 
 header {
   display: flex;
   align-items: center;
-  background-color: #f0f0f0;
+  background-color: #282525;
   width: 100%;
   margin: 0; /* Reset margin to ensure header starts at the top */
   position: fixed; /* Add this to make the header fixed at the top */
@@ -16,6 +15,26 @@ header {
   left: 0; /* Add this to position the header at the left edge */
   justify-content: space-between;
   height: 4rem;
+}
+
+aside {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  width: 300px !important;
+  height: 100%;
+  color: white;
+  overflow-y: auto;
+  margin-top: 4rem;
+}
+
+.ps-sidebar-container {
+  background-color: #282525 !important;
+}
+
+.ps-sidebar-root {
+  border: none !important;
+  width: 300px;
 }
 
 .logo img {
@@ -45,34 +64,25 @@ input::placeholder {
   color: #999;
 }
 
-
-
-
-
-.side-chant{
-
+.side-chant {
   background-color: #402222;
   width: 20vw;
-  
+
   position: absolute;
-  
+
   left: 0;
   justify-content: space-between;
-  
+
   justify-content: center;
   /*height: 100%; */
   top: 0;
-  margin-top: 4rem
-
+  margin-top: 4rem;
 }
 
 .side-chant ul {
-
   list-style-type: none;
   padding: 0;
 }
-
-
 
 .footer {
   display: flex;
@@ -87,18 +97,18 @@ input::placeholder {
 }
 
 .countries li {
-
   list-style-type: none;
 }
 
 .countries ul {
-
   flex-wrap: wrap;
-    display: flex;
+  display: flex;
 }
 
-.countries img{
-
+.countries img {
   width: 50px;
   height: 25px;
+}
+
+.ps-sidebar-root {
 }
