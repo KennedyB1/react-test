@@ -1,0 +1,48 @@
+aside {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  height: 100%;
+  color: white;
+}
+
+.sidebar {
+  width: 300px;
+  height: 100%;
+  position: absolute;
+  bottom: 0;
+  background-color: #353131;
+  overflow-y: auto;
+  max-height: calc(100% - 5rem);
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+aside h1 {
+  position: sticky;
+  top: 0;
+  background-color: #353131;
+  z-index: 1;
+  border-bottom: 1px solid;
+  margin-bottom: 0;
+}
+
+.sidebar::-webkit-scrollbar {
+  width: 8px;
+  background-color: transparent;
+}
+
+.sidebar:hover::-webkit-scrollbar {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.sidebar:hover::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.7);
+}

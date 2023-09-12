@@ -1,3 +1,5 @@
+import logo from '../assets/logo.png';
+
 export const Header = () => {
 
 
@@ -5,8 +7,8 @@ export const Header = () => {
         <header>
             
             <div className="logo">
-                {/* Replace 'logo.png' with the path to your logo image */}
-                <img src="logo.png" alt="Logo" />
+            
+            <img src={logo} alt="Logo" />
             </div>
             
                 <button>Random chant</button>
