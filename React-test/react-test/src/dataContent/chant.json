@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "continent": "Europe",
+        "nation": "Sweden",
+        "flag":"",
+        "team":"test"
+    },
+    {
+        "id": 2,
+        "continent": "Africa",
+        "nation": "N",
+        "flag":"",
+        "team":"test"
+    },
+    {
+        "id": 3,
+        "continent": "Europe",
+        "nation": "Norway",
+        "flag":"",
+        "team":"test"
+    }
+]

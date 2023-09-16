@@ -1,13 +1,14 @@
 import '../style/sidebar.css';
  
 
-export const Hellow = () => {
+export const SideBar = () => {
 
   return (
     <aside>
      
     <div className="sidebar">
     <h1>123</h1>
+    
       <ul>
         <li>Item 1</li>
         <li>Item 2</li>

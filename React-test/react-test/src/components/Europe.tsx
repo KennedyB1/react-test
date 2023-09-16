@@ -1,3 +1,4 @@
+/*
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
@@ -39,3 +40,43 @@ export const Europe = () => {
         </div>
     );
 };
+*/
+
+import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
+import { ITeam } from '../models/ITeam';
+import { fetchData } from '../services/fetchService';
+
+export const Europe = () => {
+  const [europeTeams, setEuropeTeams] = useState<ITeam[]>([]);
+
+  useEffect(() => {
+    const getData = async () => {
+      try {
+        const teamData: ITeam[] = await fetchData();
+        const europeTeamsData = teamData.filter((team) => team.continent === 'Europe');
+        setEuropeTeams(europeTeamsData);
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+    };
+
+    getData();
+  }, []);
+
+  return (
+    <>
+      <h2>European Teams</h2>
+      <ul>
+        {europeTeams.map((team) => (
+          <li key={team.id}>
+            <Link to={`/Europe/${team.nation}`}>{team.nation}</Link>
+          </li>
+        ))}
+      </ul>
+    </>
+  );
+};
+
+
+
