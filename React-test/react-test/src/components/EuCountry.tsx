@@ -1,47 +1,63 @@
-import { SideBar } from './sideBar';
 import { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import { fetchData } from '../services/fetchService';
 import { ITeam } from '../models/ITeam';
+import { Link } from 'react-router-dom';
 
 export const EuCountry = () => {
   const { nation } = useParams();
-  const [team, setTeam] = useState<ITeam | null>(null);
+  const [teams, setTeams] = useState<ITeam[] | null>(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchTeamData = async () => {
       try {
         const data = await fetchData();
-        console.log('Fetched Data:', data);
 
-        const foundTeam = data.find((t: ITeam) => t.nation === nation);
-        console.log('Found Team:', foundTeam);
+        // Check if the nation exists in your data
+        const nationExists = data.some((team: ITeam) => team.nation === nation);
 
-        setTeam(foundTeam);
+        if (!nationExists) {
+          // Nation does not exist, navigate to a Not Found page
+          navigate('/not-found');
+          return;
+        }
+
+        const sortedTeams = data
+          .filter((team: ITeam) => team.League) 
+          .sort((a: ITeam, b: ITeam) => a.League.tier - b.League.tier);
+
+        setTeams(sortedTeams);
       } catch (error) {
         console.error('Error fetching data:', error);
       }
     };
 
     fetchTeamData();
-  }, [nation]);
+  }, [nation, navigate]);
 
-  console.log('Nation from URL:', nation);
-  console.log('Team Data:', team);
+  // Filter the teams again to keep only those with the correct nation
+  const filteredTeams = teams?.filter((team: ITeam) => team.nation === nation);
 
   return (
     <>
-      <SideBar />
       <div>
-        <h1>Country: {team?.nation}</h1>
-        {team && (
+        <h1>Country: {nation}</h1>
+        {filteredTeams && (
           <div>
-            <p>Continent: {team.continent || 'No Data'}</p>
-            {/* Include other properties here */}
+            <h2>Leagues:</h2>
+            <ul>
+              {filteredTeams.map((team: ITeam, index) => (
+                <li key={index}>
+                  <Link to={`/europe/${nation}/${team.League.name}`}>
+                    {team.League.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
           </div>
         )}
       </div>
-      
     </>
   );
 };

@@ -1,47 +1,3 @@
-/*
-import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import axios from 'axios';
-import { Country } from '../models/Country';
-
-export const Europe = () => {
-    
-    // https://restcountries.com/#endpoints-region
-    const [countries, setCountries] = useState<Country[]>([]);
-
-    useEffect(() => {
-        const getData = async () => {
-            try {
-                const response = await axios.get<Country[]>(
-                    'https://restcountries.com/v3.1/region/europe'
-                );
-                const countriesData = response.data;
-                setCountries(countriesData);
-            } catch (error) {
-                console.error('Error fetching data:', error);
-            }
-        };
-
-        getData();
-    }, []);
-
-    return (
-        <div className="countries">
-            <h2>Europe</h2>
-            <ul>
-                {countries.map((country, index) => (
-                    <li key={index}>
-                        <Link to={`${country.name.common}`} state={{ country }} >
-                            {country.name.common} <img src={country.flags.svg} alt={`${country.name.common} flag`} />
-                        </Link>
-                    </li>
-                ))}
-            </ul>
-        </div>
-    );
-};
-*/
-
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ITeam } from '../models/ITeam';
@@ -55,7 +11,23 @@ export const Europe = () => {
       try {
         const teamData: ITeam[] = await fetchData();
         const europeTeamsData = teamData.filter((team) => team.continent === 'Europe');
-        setEuropeTeams(europeTeamsData);
+
+        // Create a Set to keep track of unique nation names
+        const uniqueNations = new Set<string>();
+
+        // Filter out duplicates based on nation name
+        const uniqueEuropeTeamsData = europeTeamsData.filter((team) => {
+          if (!uniqueNations.has(team.nation)) {
+            uniqueNations.add(team.nation);
+            return true;
+          }
+          return false;
+        });
+
+        // Sort the teams alphabetically based on the 'nation' property
+        uniqueEuropeTeamsData.sort((a, b) => a.nation.localeCompare(b.nation));
+
+        setEuropeTeams(uniqueEuropeTeamsData);
       } catch (error) {
         console.error('Error fetching data:', error);
       }
@@ -66,10 +38,10 @@ export const Europe = () => {
 
   return (
     <>
-      <h2>European Teams</h2>
+      <h2>European nations</h2>
       <ul>
-        {europeTeams.map((team) => (
-          <li key={team.id}>
+        {europeTeams.map((team, index) => (
+          <li key={index}>
             <Link to={`/Europe/${team.nation}`}>{team.nation}</Link>
           </li>
         ))}
@@ -77,6 +49,3 @@ export const Europe = () => {
     </>
   );
 };
-
-
-

@@ -1,23 +1,80 @@
 [
     {
-        "id": 1,
-        "continent": "Europe",
-        "nation": "Sweden",
-        "flag":"",
-        "team":"test"
-    },
-    {
-        "id": 2,
-        "continent": "Africa",
-        "nation": "N",
-        "flag":"",
-        "team":"test"
-    },
-    {
-        "id": 3,
-        "continent": "Europe",
-        "nation": "Norway",
-        "flag":"",
-        "team":"test"
+    "id": 1,
+    "continent": "Europe",
+    "nation": "Sweden",
+    "flag": "",
+    "team": "Test IF",
+    "League": {
+        "name": "Allsvenskan",
+        "tier": 1
+      },     
+    "chant": {
+      "Ford": [
+        {
+          "model": "2000",
+          "song": "hey"
+        }
+      ],
+      "BMW": [
+        {
+          "model": "X5",
+          "song": "beep"
+        }
+      ]
     }
+  },
+  {
+    "id": 2,
+    "continent": "Europe",
+    "nation": "Sweden",
+    "flag": "",
+    "team": "Örebro SK",
+    "League": {
+        "name": "Superettan",
+        "tier": 2
+      },     
+    "chant": {
+      "Ford": [
+        {
+          "model": "2000",
+          "song": "hey"
+        }
+      ],
+      "BMW": [
+        {
+          "model": "X5",
+          "song": "beep"
+        }
+      ]
+    }
+    
+  },
+  {
+    "id": 3,
+    "continent": "Europe",
+    "nation": "Norway",
+    "flag": "",
+    "team": "Örebro SK",
+    "League": {
+        "name": "Super",
+        "tier": 2
+      },     
+    "chant": {
+      "Ford": [
+        {
+          "model": "2000",
+          "song": "hey"
+        }
+      ],
+      "BMW": [
+        {
+          "model": "X5",
+          "song": "beep"
+        }
+      ]
+    }
+    
+  }
+ 
 ]
