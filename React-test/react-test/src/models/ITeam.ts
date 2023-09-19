@@ -16,4 +16,5 @@ export interface LeagueInfo {
 export interface ChantDetail {
   model: string;
   song: string;
+  video: string;
 }

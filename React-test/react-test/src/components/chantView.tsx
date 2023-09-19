@@ -42,6 +42,7 @@ export const ChantView = () => {
                     <h2>Ramsa: {chantName}</h2>
                       <p>Model: {detail.model}</p>
                       <p>Song: {detail.song}</p>
+                      <iframe width="560" height="315" src={detail.video} title="YouTube video player"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" ></iframe>
                     </li>
                   ))}
                 </ul>
