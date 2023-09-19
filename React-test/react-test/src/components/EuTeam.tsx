@@ -3,6 +3,7 @@ import { useNavigate, useParams } from 'react-router-dom';
 import { fetchData } from '../services/fetchService';
 import { ITeam } from '../models/ITeam';
 import { SideBar } from './sideBar';
+import { BackButton } from './history';
 
 export const EuTeam = () => {
 
@@ -44,6 +45,7 @@ export const EuTeam = () => {
 console.log(teams)
   return (
     <>
+    <BackButton />
     <SideBar />
       <div>
         <h1>Country: {nation}</h1>

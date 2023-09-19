@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ITeam } from '../models/ITeam';
 import { fetchData } from '../services/fetchService';
+import { BackButton } from './history';
 
 export const Europe = () => {
   const [europeTeams, setEuropeTeams] = useState<ITeam[]>([]);
@@ -38,11 +39,12 @@ export const Europe = () => {
 
   return (
     <>
+    <BackButton />
       <h2>European nations</h2>
       <ul>
         {europeTeams.map((team, index) => (
           <li key={index}>
-            <Link to={`/Europe/${team.nation}`}>{team.nation}</Link>
+            <Link to={`/Europe/${team.nation}`}><img src={team.flag} alt={`${team.nation}'s flag`} />{team.nation}</Link>
           </li>
         ))}
       </ul>

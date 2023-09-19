@@ -3,6 +3,7 @@ import { ITeam } from '../models/ITeam';
 import { fetchData } from '../services/fetchService';
 import { useParams } from 'react-router-dom';
 import { SideBar } from './sideBar';
+import { BackButton } from './history';
 
 export const ChantView = () => {
   const { nation, chantName } = useParams<{ nation: string; chantName?: string }>();
@@ -26,6 +27,7 @@ export const ChantView = () => {
   return (
     <>
       <SideBar />
+      <BackButton />
       <div>
         {team ? (
           <div>

@@ -3,7 +3,7 @@
     "id": 1,
     "continent": "Europe",
     "nation": "Sweden",
-    "flag": "",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Flag_of_Sweden.svg",
     "team": "Test IF",
     "League": {
         "name": "Allsvenskan",

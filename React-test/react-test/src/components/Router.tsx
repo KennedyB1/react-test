@@ -7,11 +7,13 @@ import { EuLeague } from "./EuLeague";
 import { EuTeam } from "./EuTeam";
 import { ChantView } from "./chantView";
 import { NotFoundPage } from "./NotFoundPage ";
+//slugify - npm
 
 export const router = createBrowserRouter([
   {
     path: "/",
     element: <Layout />,
+    errorElement: <NotFoundPage />,
     children: [
       {
         path: "/",
@@ -38,11 +40,8 @@ export const router = createBrowserRouter([
         path: "/Europe/:nation/:league/:team/:chantName",
         element: <ChantView />,
       },
-      // Add a catch-all route for non-matching paths
-      {
-        path: "*",
-        element: <NotFoundPage />, 
-      },
+      
+      
     ],
   },
 ]);

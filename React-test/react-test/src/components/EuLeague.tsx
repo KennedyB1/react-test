@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { Link, useNavigate, useParams } from 'react-router-dom';
 import { fetchData } from '../services/fetchService';
 import { ITeam } from '../models/ITeam';
+import { BackButton } from './history';
 
 export const EuLeague = () => {
 
@@ -43,6 +44,7 @@ export const EuLeague = () => {
 
   return (
     <>
+    <BackButton />
       <div>
         <h1>Country: {nation}</h1>
         <h2>League: {league}</h2>

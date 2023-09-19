@@ -3,6 +3,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { fetchData } from '../services/fetchService';
 import { ITeam } from '../models/ITeam';
 import { Link } from 'react-router-dom';
+import { BackButton } from './history';
 
 export const EuCountry = () => {
   const { nation } = useParams();
@@ -41,6 +42,7 @@ export const EuCountry = () => {
 
   return (
     <>
+    <BackButton />
       <div>
         <h1>Country: {nation}</h1>
         {filteredTeams && (
