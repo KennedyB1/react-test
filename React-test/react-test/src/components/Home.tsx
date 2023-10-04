@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 export const Home = () => {
 
-    const continent = ['Europe', 'Africa', 'Asia', 'NA', 'CA', 'SA'];
+    const continent = ['Europe', 'Africa', 'Asia', 'Americas'];
 
     return <div><h2>Continents</h2><ul>
         {
