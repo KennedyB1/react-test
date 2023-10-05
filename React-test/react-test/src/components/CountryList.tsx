@@ -5,8 +5,8 @@ import { ITeam } from '../models/ITeam';
 import { Link } from 'react-router-dom';
 import { BackButton } from './history';
 
-export const EuCountry = () => {
-  const { nation } = useParams();
+export const CountryList = () => {
+  const { continentName, nation } = useParams();  // Extract continentName
   const [teams, setTeams] = useState<ITeam[] | null>(null);
   const navigate = useNavigate();
 
@@ -51,7 +51,7 @@ export const EuCountry = () => {
             <ul>
               {filteredTeams.map((team: ITeam, index) => (
                 <li key={index}>
-                  <Link to={`/europe/${nation}/${team.League.name}`}>
+                  <Link to={`/${continentName}/${nation}/${team.League.name}`}>  {/* Use continentName */}
                     {team.League.name}
                   </Link>
                 </li>

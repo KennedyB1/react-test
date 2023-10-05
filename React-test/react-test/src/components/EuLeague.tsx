@@ -6,7 +6,9 @@ import { BackButton } from './history';
 
 export const EuLeague = () => {
 
-  const { nation, league } = useParams();
+  const { nation, league, continentName } = useParams();
+
+
   const [teams, setTeams] = useState<ITeam[] | null>(null);
   const navigate = useNavigate();
 
@@ -53,7 +55,7 @@ export const EuLeague = () => {
             <ul>
               {teams.map((team: ITeam, index) => (
                 <li key={index}>
-                  <Link to={`/europe/${nation}/${team.League?.name}/${team.team}`}>
+                  <Link to={`/${continentName}/${nation}/${team.League?.name}/${team.team}`}>
                     {team.team}
                   </Link>
                 </li>

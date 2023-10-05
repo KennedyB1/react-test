@@ -1,13 +1,12 @@
 import { createBrowserRouter } from "react-router-dom";
 import { Home } from "./Home";
-import { Europe } from "./Europe";
-import { EuCountry } from "./EuCountry";
+import { Continent } from "./Continent";  // renamed from Europe to Continent
+import { CountryList } from "./CountryList";
 import { Layout } from "./Layout";
 import { EuLeague } from "./EuLeague";
 import { EuTeam } from "./EuTeam";
 import { ChantView } from "./chantView";
 import { NotFoundPage } from "./NotFoundPage ";
-//slugify - npm
 
 export const router = createBrowserRouter([
   {
@@ -21,27 +20,25 @@ export const router = createBrowserRouter([
         index: true,
       },
       {
-        path: "/Europe",
-        element: <Europe />,
+        path: "/:continentName",
+        element: <Continent />,   // renamed from Europe to Continent
       },
       {
-        path: "/Europe/:nation",
-        element: <EuCountry />,
+        path: "/:continentName/:nation",
+        element: <CountryList />,  
       },
       {
-        path: "/Europe/:nation/:league",
+        path: "/:continentName/:nation/:league",
         element: <EuLeague />,
       },
       {
-        path: "/Europe/:nation/:league/:team",
+        path: "/:continentName/:nation/:league/:team",
         element: <EuTeam />,
       },
       {
-        path: "/Europe/:nation/:league/:team/:chantName",
+        path: "/:continentName/:nation/:league/:team/:chantName",
         element: <ChantView />,
       },
-      
-      
     ],
   },
 ]);

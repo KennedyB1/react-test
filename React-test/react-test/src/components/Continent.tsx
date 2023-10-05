@@ -1,23 +1,29 @@
 import { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { ITeam } from '../models/ITeam';
 import { fetchData } from '../services/fetchService';
 import { BackButton } from './history';
 
-export const Europe = () => {
-  const [europeTeams, setEuropeTeams] = useState<ITeam[]>([]);
+type ParamsType = {
+  [key: string]: string | undefined;
+};
+
+
+export const Continent = () => {
+  const [teams, setTeams] = useState<ITeam[]>([]);
+  const { continentName } = useParams<ParamsType>();
 
   useEffect(() => {
     const getData = async () => {
       try {
         const teamData: ITeam[] = await fetchData();
-        const europeTeamsData = teamData.filter((team) => team.continent === 'Europe');
+        const continentTeamsData = teamData.filter((team) => team.continent === continentName);
 
         // Create a Set to keep track of unique nation names
         const uniqueNations = new Set<string>();
 
         // Filter out duplicates based on nation name
-        const uniqueEuropeTeamsData = europeTeamsData.filter((team) => {
+        const uniqueContinentTeamsData = continentTeamsData.filter((team) => {
           if (!uniqueNations.has(team.nation)) {
             uniqueNations.add(team.nation);
             return true;
@@ -26,25 +32,25 @@ export const Europe = () => {
         });
 
         // Sort the teams alphabetically based on the 'nation' property
-        uniqueEuropeTeamsData.sort((a, b) => a.nation.localeCompare(b.nation));
+        uniqueContinentTeamsData.sort((a, b) => a.nation.localeCompare(b.nation));
 
-        setEuropeTeams(uniqueEuropeTeamsData);
+        setTeams(uniqueContinentTeamsData);
       } catch (error) {
         console.error('Error fetching data:', error);
       }
     };
 
     getData();
-  }, []);
+  }, [continentName]);
 
   return (
     <>
-    <BackButton />
-      <h2>European nations</h2>
+      <BackButton />
+      <h2>{continentName} nations</h2>
       <ul>
-        {europeTeams.map((team, index) => (
+        {teams.map((team, index) => (
           <li key={index}>
-            <Link to={`/Europe/${team.nation}`}><img src={team.flag} alt={`${team.nation}'s flag`} />{team.nation}</Link>
+            <Link to={`/${continentName}/${team.nation}`}><img src={team.flag} alt={`${team.nation}'s flag`} />{team.nation}</Link>
           </li>
         ))}
       </ul>
