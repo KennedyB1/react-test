@@ -4,7 +4,7 @@ import { fetchData } from '../services/fetchService';
 import { ITeam } from '../models/ITeam';
 import { BackButton } from './history';
 
-export const EuLeague = () => {
+export const League = () => {
 
   const { nation, league, continentName } = useParams();
 

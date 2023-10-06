@@ -5,7 +5,7 @@ import { fetchData } from '../services/fetchService';
 import { ITeam } from '../models/ITeam';
 
 export const SideBar = () => {
-  const { nation, league } = useParams();
+  const { nation, league, continentName } = useParams();
   const [team, setTeam] = useState<ITeam | null>(null);
 
   useEffect(() => {
@@ -30,7 +30,7 @@ export const SideBar = () => {
          <ul>
           {team?.chant && Object.keys(team.chant).map((chantName, index) => (
             <li key={index}>
-              <Link to={`/Europe/${team?.nation}/${league}/${team.team}/${chantName}`}>{chantName}</Link>
+              <Link to={`/${continentName}/${team?.nation}/${league}/${team.team}/${chantName}`}>{chantName}</Link>
             </li>
           ))}
         </ul>
@@ -38,3 +38,4 @@ export const SideBar = () => {
     </aside>
   );
 };
+

@@ -5,6 +5,7 @@ import { useParams } from 'react-router-dom';
 import { SideBar } from './sideBar';
 import { BackButton } from './history';
 
+
 export const ChantView = () => {
   const { nation, chantName } = useParams<{ nation: string; chantName?: string }>();
   const [team, setTeam] = useState<ITeam | null>(null);

@@ -3,8 +3,8 @@ import { Home } from "./Home";
 import { Continent } from "./Continent";  // renamed from Europe to Continent
 import { CountryList } from "./CountryList";
 import { Layout } from "./Layout";
-import { EuLeague } from "./EuLeague";
-import { EuTeam } from "./EuTeam";
+import { League } from "./League";
+import { Team } from "./Team";
 import { ChantView } from "./chantView";
 import { NotFoundPage } from "./NotFoundPage ";
 
@@ -29,11 +29,11 @@ export const router = createBrowserRouter([
       },
       {
         path: "/:continentName/:nation/:league",
-        element: <EuLeague />,
+        element: <League />,
       },
       {
         path: "/:continentName/:nation/:league/:team",
-        element: <EuTeam />,
+        element: <Team />,
       },
       {
         path: "/:continentName/:nation/:league/:team/:chantName",

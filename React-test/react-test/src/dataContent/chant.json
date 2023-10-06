@@ -1,5 +1,5 @@
 [
-    {
+  {
     "id": 1,
     "continent": "Europe",
     "nation": "Sweden",
@@ -8,19 +8,23 @@
     "League": {
         "name": "Allsvenskan",
         "tier": 1
-      },     
+    },     
     "chant": {
       "Ford": [
         {
           "model": "2000",
           "song": "hey",
-          "video": "https://www.youtube.com/embed/CLeZyIID9Bo?si=4HLK-BNrMr4m_zwT"
+          "video": [
+            "https://www.youtube.com/embed/CLeZyIID9Bo?si=4HLK-BNrMr4m_zwT",
+            "https://www.youtube.com/embed/CLeZyIID9Bo?si=4HLK-BNrMr4m_zwT"
+          ]
         }
       ],
       "BMW": [
         {
           "model": "X5",
-          "song": "beep"
+          "song": "beep",
+          "video": "https://www.youtube.com/embed/CLeZyIID9Bo?si=4HLK-BNrMr4m_zwT"
         }
       ]
     }

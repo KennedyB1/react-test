@@ -5,7 +5,7 @@ import { ITeam } from '../models/ITeam';
 import { SideBar } from './sideBar';
 import { BackButton } from './history';
 
-export const EuTeam = () => {
+export const Team = () => {
 
     const { nation, league, team } = useParams();
   const [teams, setTeams] = useState<ITeam[] | null>(null);
