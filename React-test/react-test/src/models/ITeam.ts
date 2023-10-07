@@ -14,6 +14,7 @@ export interface LeagueInfo {
 }
 
 export interface ChantDetail {
+  translate: string;
   model: string;
   song: string;
   video: string;

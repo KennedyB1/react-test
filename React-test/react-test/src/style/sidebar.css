@@ -11,7 +11,7 @@ aside {
   height: 100%;
   position: absolute;
   bottom: 0;
-  background-color: #353131;
+  border-right: 1px solid;
   overflow-y: auto;
   max-height: calc(100% - 5rem);
 }
@@ -28,9 +28,8 @@ li {
 aside h1 {
   position: sticky;
   top: 0;
-  background-color: #353131;
   z-index: 1;
-  border-bottom: 1px solid;
+  border-bottom: 1px solid white;
   margin-bottom: 0;
 }
 

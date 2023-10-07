@@ -10,11 +10,16 @@
         "tier": 1
     },     
     "chant": {
-      "Ford": [
+      "Ff": [
         {
           "model": "2000",
           "song": "hey",
+          "translate": {
+            "English": "hey",
+            "Swedish": "hej"
+          },
           "video": [
+            "https://www.youtube.com/embed/CLeZyIID9Bo?si=4HLK-BNrMr4m_zwT",
             "https://www.youtube.com/embed/CLeZyIID9Bo?si=4HLK-BNrMr4m_zwT",
             "https://www.youtube.com/embed/CLeZyIID9Bo?si=4HLK-BNrMr4m_zwT"
           ]
@@ -24,6 +29,10 @@
         {
           "model": "X5",
           "song": "beep",
+          "translate": {
+            "English": "hey",
+            "Swedish": "hej"
+          },
           "video": "https://www.youtube.com/embed/CLeZyIID9Bo?si=4HLK-BNrMr4m_zwT"
         }
       ]
@@ -43,7 +52,12 @@
       "Ford": [
         {
           "model": "2000",
-          "song": "hey"
+          "song": "hey",
+          "translate": {
+            "English": "hey",
+            "Swedish": "hej"
+          },
+          "video": "https://www.youtube.com/embed/CLeZyIID9Bo?si=4HLK-BNrMr4m_zwT"
         }
       ],
       "BMW": [
@@ -65,21 +79,33 @@
         "name": "Super",
         "tier": 2
       },     
-    "chant": {
-      "Ford": [
-        {
-          "model": "2000",
-          "song": "hey"
-        }
-      ],
-      "BMW": [
-        {
-          "model": "X5",
-          "song": "beep"
-        }
-      ]
+      "chant": {
+        "Ford": [
+          {
+            "model": "2000",
+            "song": "hey",
+            "translate": {
+              "English": "hey",
+              "Swedish": "hej"
+            },
+            "video": "https://www.youtube.com/embed/CLeZyIID9Bo?si=4HLK-BNrMr4m_zwT"
+          }
+        ],
+        "BMW": [
+          {
+            "model": "X5",
+            "song": "beep",
+            "translate": {
+              "English": "hey",
+              "Swedish": "hej"
+            },
+            "video": ""
+          }
+          
+        ]
+      }
+      
     }
     
-  }
  
 ]
