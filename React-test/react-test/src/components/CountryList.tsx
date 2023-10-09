@@ -50,7 +50,7 @@ export const CountryList = () => {
             <h2>Leagues:</h2>
             <ul>
               {filteredTeams.map((team: ITeam, index) => (
-                <li key={index}>
+                <li key={index} className='linkButton'>
                   <Link to={`/${continentName}/${nation}/${team.League.name}`}>  {/* Use continentName */}
                     {team.League.name}
                   </Link>

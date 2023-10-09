@@ -54,7 +54,7 @@ export const League = () => {
           <div>
             <ul>
               {teams.map((team: ITeam, index) => (
-                <li key={index}>
+                <li key={index} className='linkButton'>
                   <Link to={`/${continentName}/${nation}/${team.League?.name}/${team.team}`}>
                     {team.team}
                   </Link>

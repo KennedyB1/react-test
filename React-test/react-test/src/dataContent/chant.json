@@ -3,7 +3,7 @@
     "id": 1,
     "continent": "Europe",
     "nation": "Sweden",
-    "flag": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Flag_of_Sweden.svg",
+    "flag": "https://flagpedia.net/data/flags/h80/se.webp",
     "team": "Test IF",
     "League": {
         "name": "Allsvenskan",
@@ -26,6 +26,83 @@
         }
       ],
       "BMW": [
+        {
+          "model": "X5",
+          "song": "beep",
+          "translate": {
+            "English": "hey",
+            "Swedish": "hej"
+          },
+          "video": "https://www.youtube.com/embed/CLeZyIID9Bo?si=4HLK-BNrMr4m_zwT"
+        }
+      ],
+      "BMW1": [
+        {
+          "model": "X5",
+          "song": "beep",
+          "translate": {
+            "English": "hey",
+            "Swedish": "hej"
+          },
+          "video": "https://www.youtube.com/embed/CLeZyIID9Bo?si=4HLK-BNrMr4m_zwT"
+        }
+      ],
+      "BMW2": [
+        {
+          "model": "X5",
+          "song": "beep",
+          "translate": {
+            "English": "hey",
+            "Swedish": "hej"
+          },
+          "video": "https://www.youtube.com/embed/CLeZyIID9Bo?si=4HLK-BNrMr4m_zwT"
+        }
+      ],
+      "BMW3": [
+        {
+          "model": "X5",
+          "song": "beep",
+          "translate": {
+            "English": "hey",
+            "Swedish": "hej"
+          },
+          "video": "https://www.youtube.com/embed/CLeZyIID9Bo?si=4HLK-BNrMr4m_zwT"
+        }
+      ],
+      "BMW4": [
+        {
+          "model": "X5",
+          "song": "beep",
+          "translate": {
+            "English": "hey",
+            "Swedish": "hej"
+          },
+          "video": "https://www.youtube.com/embed/CLeZyIID9Bo?si=4HLK-BNrMr4m_zwT"
+        }
+      ],
+      "BMW5": [
+        {
+          "model": "X5",
+          "song": "beep",
+          "translate": {
+            "English": "hey",
+            "Swedish": "hej"
+          },
+          "video": "https://www.youtube.com/embed/CLeZyIID9Bo?si=4HLK-BNrMr4m_zwT"
+        }
+      ],
+      "BMW6": [
+        {
+          "model": "X5",
+          "song": "beep",
+          "translate": {
+            "English": "hey",
+            "Swedish": "hej"
+          },
+          "video": "https://www.youtube.com/embed/CLeZyIID9Bo?si=4HLK-BNrMr4m_zwT"
+        }
+      ],
+      "BMW7": [
         {
           "model": "X5",
           "song": "beep",
@@ -73,7 +150,7 @@
     "id": 3,
     "continent": "Europe",
     "nation": "Norway",
-    "flag": "",
+    "flag": "https://flagpedia.net/data/flags/h80/no.webp",
     "team": "Örebro SK",
     "League": {
         "name": "Super",
@@ -99,7 +176,7 @@
               "English": "hey",
               "Swedish": "hej"
             },
-            "video": ""
+            "video": "https://www.youtube.com/embed/CLeZyIID9Bo?si=4HLK-BNrMr4m_zwT"
           }
           
         ]

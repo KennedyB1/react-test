@@ -49,7 +49,7 @@ export const Continent = () => {
       <h2>{continentName} nations</h2>
       <ul>
         {teams.map((team, index) => (
-          <li key={index}>
+          <li key={index} className='linkButton'>
             <Link to={`/${continentName}/${team.nation}`}><img src={team.flag} alt={`${team.nation}'s flag`} />{team.nation}</Link>
           </li>
         ))}

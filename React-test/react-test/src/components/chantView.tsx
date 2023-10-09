@@ -41,6 +41,12 @@ const videoHeight = 315;
     setSelectedTranslation(event.target.value);
   };
 
+  const copyToClipboard = () => {
+    navigator.clipboard.writeText(selectedTranslation);
+  };
+  
+  
+
   return (
     <>
       <SideBar />
@@ -53,10 +59,11 @@ const videoHeight = 315;
                 <ul>
                   {team.chant[chantName].map((detail, index) => (
                     <li key={index}>
+                      <h1>Land: {team.nation}</h1>
                     <h1>Lag: {team.team}</h1>
                     <h2>Ramsa: {chantName}</h2>
                       <p>Model: {detail.model}</p>
-                      <p>Song: {detail.song}</p>
+                      <p>Text: {detail.song}</p>
                       <select onChange={handleTranslationChange}>
               {Object.entries(detail.translate).map(([lang, translation], i) => (
                 <option key={i} value={translation}>
@@ -67,6 +74,8 @@ const videoHeight = 315;
 
             {/* Displaying the selected translation */}
             <p>{selectedTranslation}</p>
+            <button onClick={copyToClipboard}>Copy to Clipboard</button>
+
           </li>
                   ))}
                 </ul>
