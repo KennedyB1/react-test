@@ -137,10 +137,15 @@
           "video": "https://www.youtube.com/embed/CLeZyIID9Bo?si=4HLK-BNrMr4m_zwT"
         }
       ],
-      "BMW": [
+      "Ford1": [
         {
-          "model": "X5",
-          "song": "beep"
+          "model": "2000",
+          "song": "hey",
+          "translate": {
+            "English": "hey",
+            "Swedish": "hej"
+          },
+          "video": "https://www.youtube.com/embed/CLeZyIID9Bo?si=4HLK-BNrMr4m_zwT"
         }
       ]
     }

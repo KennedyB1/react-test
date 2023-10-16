@@ -5,8 +5,8 @@ import { CountryList } from "./CountryList";
 import { Layout } from "./Layout";
 import { League } from "./League";
 import { Team } from "./Team";
-import { ChantView } from "./chantView";
 import { NotFoundPage } from "./NotFoundPage ";
+import { ChantView } from "./chantView";
 
 export const router = createBrowserRouter([
   {
