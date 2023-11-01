@@ -1,6 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import { Home } from "./Home";
-import { Continent } from "./Continent";  // renamed from Europe to Continent
+import { Continent } from "./Continent"; 
 import { CountryList } from "./CountryList";
 import { Layout } from "./Layout";
 import { League } from "./League";
