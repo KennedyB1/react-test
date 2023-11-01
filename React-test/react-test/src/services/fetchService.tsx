@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const JSON_URL = '/src/dataContent/chant.json'; // Update the URL to your JSON file
+const JSON_URL = '/chant.json'; // Update the URL to your JSON file
 
 export const fetchData = async () => {
   try {
