@@ -20,13 +20,23 @@ export const ChantView = () => {
         const data = await fetchData();
         const foundTeam = data.find((t: ITeam) => t.nation === nation && t.team === selectedTeam);
         setTeam(foundTeam);
+        // Reset selected translation whenever a new team is fetched.
+        setSelectedTranslation("");
       } catch (error) {
         console.error('Error fetching data:', error);
       }
     };
 
     fetchTeamData();
-  }, [nation, selectedTeam]);
+  }, [nation, selectedTeam, chantName]); 
+
+  useEffect(() => {
+    // Assuming that you want to default to the first translation in the list:
+    if (team && chantName && team.chant[chantName] && team.chant[chantName].length > 0) {
+      const firstTranslation = Object.values(team.chant[chantName][0].translate)[0];
+      setSelectedTranslation(firstTranslation);
+    }
+  }, [team, chantName]);
 
   const videoData: string[] = team && chantName && team.chant[chantName]
     ? (Array.isArray(team.chant[chantName][0].video)
@@ -37,7 +47,8 @@ export const ChantView = () => {
   const [selectedTranslation, setSelectedTranslation] = useState<string>("");
 
   const handleTranslationChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
-    setSelectedTranslation(event.target.value);
+    const translation = event.target.value;
+    setSelectedTranslation(translation);
   };
 
   const copyToClipboard = () => {
@@ -61,7 +72,7 @@ export const ChantView = () => {
                       <h2>Ramsa: {chantName}</h2>
                       <p>Model: {detail.model}</p>
                       <p>Text: {detail.song}</p>
-                      <select onChange={handleTranslationChange}>
+                      <select key={selectedTeam + chantName} onChange={handleTranslationChange}>
                         {Object.entries(detail.translate).map(([lang, translation], i) => (
                           <option key={i} value={translation}>
                             {lang}

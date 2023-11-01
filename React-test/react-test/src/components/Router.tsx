@@ -6,7 +6,7 @@ import { Layout } from "./Layout";
 import { League } from "./League";
 import { Team } from "./Team";
 import { NotFoundPage } from "./NotFoundPage ";
-import { ChantView } from "./chantView";
+import { ChantView } from "./ChantView";
 
 export const router = createBrowserRouter([
   {
