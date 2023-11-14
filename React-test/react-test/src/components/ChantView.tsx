@@ -26,9 +26,15 @@ export const ChantView = () => {
         console.error('Error fetching data:', error);
       }
     };
-
+    
     fetchTeamData();
+    
   }, [nation, selectedTeam, chantName]); 
+//Körs i början, för att återställa 'video' till index 0
+  useEffect(() => {
+    setCurrentSlide(0);
+  }, []); 
+  
 
   useEffect(() => {
     // Assuming that you want to default to the first translation in the list:
@@ -54,6 +60,7 @@ export const ChantView = () => {
   const copyToClipboard = () => {
     navigator.clipboard.writeText(selectedTranslation);
   };
+  const [currentSlide, setCurrentSlide] = useState(0);
 
   return (
     <>
@@ -87,7 +94,7 @@ export const ChantView = () => {
                   ))}
                 </ul>
 
-                <Carousel showThumbs={false} dynamicHeight={false} width={`${videoWidth}px`}>
+                <Carousel key={`${nation}-${selectedTeam}-${chantName}`}  showThumbs={false}  dynamicHeight={false} width={`${videoWidth}px`} selectedItem={currentSlide}>
                   {videoData.map((videoUrl, index) => (
                     <div key={index} style={{ width: videoWidth, height: videoHeight }}>
                       <iframe
