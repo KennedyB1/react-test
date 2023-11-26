@@ -31,11 +31,29 @@
           "song": "Vi är bajen från söder, Vi är grönvita bröder",
           "translate": {
             "English": "We are bajen from the south, We are green and white brothers",
-            "Swedish": "Vi är bajen från söder, Vi är grönvita bröder"
+            "Spanish": "Somos bajen del sur, Somos hermanos verdes y blancos",
+            "French": "Nous sommes bajen du sud, Nous sommes frères verts et blancs",
+            "German": "Wir sind bajen aus dem Süden, Wir sind grün-weiße Brüder",
+            "Italian": "Siamo bajen dal sud, Siamo fratelli verdi e bianchi",
+            "Portuguese": "Somos bajen do sul, Somos irmãos verdes e brancos",
+            "Russian": "Мы байен из юга, Мы зелено-белые братья",
+            "Chinese (Simplified)": "我们是南方的巴耶恩，我们是绿白兄弟",
+            "Japanese": "私たちは南のバイエン、緑と白の兄弟です",
+            "Korean": "우리는 남쪽에서 온 바이엔, 우리는 녹색과 하얀 형제",
+            "Arabic": "نحن باجن من الجنوب، نحن إخوة أخضر وأبيض",
+            "Turkish": "Güneyden gelen bajeniz, Yeşil beyaz kardeşleriz",
+            "Dutch": "Wij zijn bajen vanuit het zuiden, Wij zijn groen-witte broers",
+            "Swedish": "Vi är bajen från söder, Vi är grönvita bröder",
+            "Polish": "Jesteśmy bajen z południa, Jesteśmy zielono-biali bracia",
+            "Hindi": "हम दक्षिण से बजेन हैं, हम हरे और सफेद भाई हैं",
+            "Bengali": "আমরা দক্ষিণ থেকে বাজেন, আমরা সবুজ ও সাদা ভাই",
+            "Greek": "Είμαστε bajen από τον νότο, Είμαστε πράσινοι και λευκοί αδερφοί",
+            "Romanian": "Suntem bajen din sud, Suntem frați verzi și albi",
+            "Czech": "Jsme bajen z jihu, Jsme zelenobílí bratři"
           },
           "video": "https://www.youtube.com/embed/HxD4dJUXXEc?si=aMx48yH4PIy-hWGR"
         }
-      ],
+      ],      
       "BMW1": [
         {
           "model": "X5",

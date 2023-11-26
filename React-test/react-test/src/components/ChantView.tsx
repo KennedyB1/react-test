@@ -77,7 +77,6 @@ export const ChantView = () => {
                       <h1>Land: {team.nation}</h1>
                       <h1>Lag: {team.team}</h1>
                       <h2>Ramsa: {chantName}</h2>
-                      <p>Model: {detail.model}</p>
                       <p>Text: {detail.song}</p>
                       <select key={selectedTeam + chantName} onChange={handleTranslationChange}>
                         {Object.entries(detail.translate).map(([lang, translation], i) => (
